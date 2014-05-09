@@ -1,6 +1,3 @@
-// disabling extension for now!
-if (0) {
-
 var RESCAN_PERIOD = 1000;
 var RESCAN_PERIOD_IDLE = 5000;
 var YIELD = 10;
@@ -601,7 +598,4 @@ if (!isJsPage && !isHangoutPage) {
     document.documentElement.insertBefore(script, null);
     document.documentElement.removeChild(script);*/
     
-}
-
-
 }

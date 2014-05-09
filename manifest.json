@@ -17,12 +17,10 @@
       "32": "icon32.png",
       "64": "icon32.png"
    },
-   "key": "MIGfMA0GCSqGSIb3DQEBAQUAA4GNADCBiQKBgQC3o0E1vq3GCBhfEkZM2ly6xqItmcZGVjdbpKMbNHYyIlR5f5gaKU0aCUGnTvd9lVcZCy/ovl0FQ3wBlVN48nf4J6MM6Xw/JLcYn6tA0w214zLT2f9KRU83Sg/8DJPilaCjyw+0JJMIbnOFtdPDAQG6dtFeZdZspggWGGMQafRwdwIDAQAB",
    "manifest_version": 2,
    "name": "__MSG_extName__",
    "options_page": "fancysettings/source/index.html",
    "permissions": [ "notifications" ],
-   "update_url": "http://clients2.google.com/service/update2/crx",
    "version": "1.63",
    "web_accessible_resources": [ "updates.html", "updates.js", "icon32.png" ]
 }
