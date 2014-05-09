@@ -10,7 +10,7 @@ then
 	export TRAVIS_BUILD_NUMBER="0"
 fi
 VERSION=2.$TRAVIS_BUILD_NUMBER
-cat extension/manifest.json | sed s/__BUILD_VERSION__/$VERSION/ > build/tmp/manifest.json
+cat extension/manifest.json | sed "s/\"version\": \"0\"/\"version\": \"$VERSION\"/" > build/tmp/manifest.json
 cd build/tmp
 zip -9r ../zip/plus.zip .
 cd ../..
