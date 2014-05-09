@@ -19,14 +19,7 @@ window.addEvent("domready", function () {
             chrome.extension.sendRequest({ name: "desktopnotify", message: "Testing desktop notifications" });
         });
         settings.manifest.chime_notify_test.addEvent("action", function () {
-            var audio = document.createElement('audio');
-            audio.src = chrome.extension.getURL("chime.mp3");
-            audio.autoplay = true;
-            audio.addEventListener('ended', function() {
-                audio.parentElement.removeChild(audio);
-            }, true);
-            audio.volume = +settings.manifest.chime_notify_volume.element.value;
-            document.body.appendChild(audio);
+            chrome.extension.sendRequest({ name: "chime" });
         });
     });
 });

@@ -1,42 +1,127 @@
 {
-  "extName": { "message": "Replies and more for Google+" },
-  "reply_to_comment": { "message": "Reply" },
-  "reply_to_author": { "message": "Reply to Author" },
-  "share_on_twitter": { "message": "Share on Twitter" }, 
-  "share_on_facebook": { "message": "Share on Facebook" }, 
-  "share_by_email": { "message": "Email" }, 
-
-  "options": { "message": "Options" },
-  "options_features": { "message": "Features" },
-  "options_extra_features": { "message": "Extra Features" },
-  "options_beta": { "message": "BETA" },
-  "options_bugs": { "message": "Bugs" },
-  "options_author": { "message": "Author" },
-  
-  "options_reply_to_author": { "message": "Add a 'Reply to Author' link next to posts" },
-  "options_reply_to_comment": { "message": "Add a 'Reply' link next to comments" },
-  "options_fixed_header": { "message": "Float the header as you scroll down the page" },
-  "options_ctrl_enter_submit": { "message": "Ctrl+Enter submits the current post or comment" },
-  "options_shift_enter_submit": { "message": "Shift+Enter submits the current post or comment" },
-  "options_m_mute": { "message": "'M' key mutes a post" },
-  "options_favicon_notify": { "message": "Animate the tab icon when there are new notifications (no sleep mode)" },
-  "options_extended_shares": { "message": "Adds extra sharing options (Twitter, Facebook, Email) to a share menu" },
-  "options_chime_notify": { "message": "Chime sound on new notifications" },
-  "options_chime_notify_volume": { "message": "Chime volume" },
-  "options_chime_notify_test": { "message": "Test sound" },
-  "options_desktop_notify": { "message": "Show desktop notifications" },
-  "options_desktop_notify_test": { "message": "Test desktop notifications" },
-  "options_original_share": { "message": "Add link to original source of share" },
-  "options_report_bug": { "message": "Found a bug? Report it on Google Code" },
-  "options_report_bug_button": { "message": "Report Bug" },
-  "options_extension_page": { "message": "Visit the extension page to leave a glowing review" },
-  "options_extension_page_button": { "message": "Extension Page" },
-  "options_extension_plus_page": { "message": "Add Replies and More to your circles on Google+" },
-  "options_extension_plus_page_button": { "message": "Replies and More on Google+" },
-  "options_developer_page": { "message": "Follow or complain directly to the developer on Google+" },
-  "options_developer_page_button": { "message": "Matt Mastracci on Google+" },
-  "options_donate_page": { "message": "Donate a cup of coffee" },
-  "options_donate_page_button": { "message": "Donate" },
-  "desktop_notify_1": { "message": "You have 1 new notification" },
-  "desktop_notify_n": { "message": "You have $count$ new notifications", "placeholders": { "count": { "content": "$1" } } }
+   "desktop_notify_1": {
+      "message": "You have 1 new notification"
+   },
+   "desktop_notify_n": {
+      "message": "You have $count$ new notifications",
+      "placeholders": {
+         "count": {
+            "content": "$1"
+         }
+      }
+   },
+   "extName": {
+      "message": "Replies and more for Google+"
+   },
+   "options": {
+      "message": "Options"
+   },
+   "options_author": {
+      "message": "Author"
+   },
+   "options_auto_expand_comments": {
+      "message": "Auto-expand long comments when all comments are shown"
+   },
+   "options_auto_expand_posts": {
+      "message": "Auto-expand long text posts"
+   },
+   "options_beta": {
+      "message": "BETA"
+   },
+   "options_bugs": {
+      "message": "Bugs"
+   },
+   "options_chime_notify": {
+      "message": "Chime sound on new notifications"
+   },
+   "options_chime_notify_test": {
+      "message": "Test sound"
+   },
+   "options_chime_notify_volume": {
+      "message": "Chime volume"
+   },
+   "options_ctrl_enter_submit": {
+      "message": "Ctrl+Enter submits the current post or comment"
+   },
+   "options_desktop_notify": {
+      "message": "Show desktop notifications"
+   },
+   "options_desktop_notify_test": {
+      "message": "Test desktop notifications"
+   },
+   "options_developer_page": {
+      "message": "Follow or complain directly to the developer on Google+"
+   },
+   "options_developer_page_button": {
+      "message": "Matt Mastracci on Google+"
+   },
+   "options_donate_page": {
+      "message": "Donate a cup of coffee"
+   },
+   "options_donate_page_button": {
+      "message": "Donate"
+   },
+   "options_extended_shares": {
+      "message": "Adds extra sharing options (Twitter, Facebook, Email) to a share menu"
+   },
+   "options_extension_page": {
+      "message": "Visit the extension page to leave a glowing review"
+   },
+   "options_extension_page_button": {
+      "message": "Extension Page"
+   },
+   "options_extension_plus_page": {
+      "message": "Add Replies and More to your circles on Google+"
+   },
+   "options_extension_plus_page_button": {
+      "message": "Replies and More on Google+"
+   },
+   "options_extra_features": {
+      "message": "Extra Features"
+   },
+   "options_favicon_notify": {
+      "message": "Animate the tab icon when there are new notifications (no sleep mode)"
+   },
+   "options_features": {
+      "message": "Features"
+   },
+   "options_fixed_header": {
+      "message": "Float the header as you scroll down the page"
+   },
+   "options_m_mute": {
+      "message": "'M' key mutes a post"
+   },
+   "options_original_share": {
+      "message": "Add link to original source of share"
+   },
+   "options_reply_to_author": {
+      "message": "Add a 'Reply to Author' link next to posts"
+   },
+   "options_reply_to_comment": {
+      "message": "Add a 'Reply' link next to comments"
+   },
+   "options_report_bug": {
+      "message": "Found a bug? Report it on Google Code"
+   },
+   "options_report_bug_button": {
+      "message": "Report Bug"
+   },
+   "options_shift_enter_submit": {
+      "message": "Shift+Enter submits the current post or comment"
+   },
+   "reply_to_author": {
+      "message": "Reply to Author"
+   },
+   "reply_to_comment": {
+      "message": "Reply"
+   },
+   "share_by_email": {
+      "message": "Email"
+   },
+   "share_on_facebook": {
+      "message": "Share on Facebook"
+   },
+   "share_on_twitter": {
+      "message": "Share on Twitter"
+   }
 }

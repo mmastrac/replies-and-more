@@ -1,5 +1,11 @@
 {
-    "extName": { "message": "Répliques et plus encore pour Google+" },
-	"reply_to_comment": { "message": "Répliquer" },
-	"reply_to_author": { "message": "Répondre à l'Auteur" }
+   "extName": {
+      "message": "R\u00E9pliques et plus encore pour Google+"
+   },
+   "reply_to_author": {
+      "message": "R\u00E9pondre \u00E0 l'Auteur"
+   },
+   "reply_to_comment": {
+      "message": "R\u00E9pliquer"
+   }
 }

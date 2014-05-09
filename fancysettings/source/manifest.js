@@ -54,6 +54,20 @@ this.manifest = {
     },
     {
       "tab": chrome.i18n.getMessage("options"),
+      "group": chrome.i18n.getMessage("options_features"),
+      "name": "auto_expand_posts",
+      "type": "checkbox",
+      "label": chrome.i18n.getMessage("options_auto_expand_posts")
+    },
+    {
+      "tab": chrome.i18n.getMessage("options"),
+      "group": chrome.i18n.getMessage("options_features"),
+      "name": "auto_expand_comments",
+      "type": "checkbox",
+      "label": chrome.i18n.getMessage("options_auto_expand_comments")
+    },
+    {
+      "tab": chrome.i18n.getMessage("options"),
       "group": chrome.i18n.getMessage("options_extra_features"),
       "name": "desktop_notify",
       "type": "checkbox",
@@ -95,13 +109,6 @@ this.manifest = {
       "type": "button",
       "label": "",
       "text": chrome.i18n.getMessage("options_chime_notify_test")
-    },
-    {
-      "tab": chrome.i18n.getMessage("options"),
-      "group": chrome.i18n.getMessage("options_beta"),
-      "name": "beta_original_share",
-      "type": "checkbox",
-      "label": chrome.i18n.getMessage("options_original_share")
     },
     {
       "tab": chrome.i18n.getMessage("options"),

@@ -1,6 +1,11 @@
 {
-    "extName": { "message": "Antworten und Mehr für Google+" },
-        "reply_to_comment": { "message": "Antworten" },
-        "reply_to_author": { "message": "Dem Autor antworten" }
+   "extName": {
+      "message": "Antworten und Mehr f\u00FCr Google+"
+   },
+   "reply_to_author": {
+      "message": "Dem Autor antworten"
+   },
+   "reply_to_comment": {
+      "message": "Antworten"
+   }
 }
-

@@ -1,11 +1,15 @@
 {
-   "background_page": "background.html",
+   "background": {
+      "page": "background.html"
+   },
    "content_scripts": [ {
       "all_frames": true,
       "js": [ "script.js" ],
       "matches": [ "http://plus.google.com/*", "https://plus.google.com/*" ],
       "run_at": "document_start"
    } ],
+   "content_security_policy": "script-src 'self' https://*.googleapis.com https://*.google.com; default-src https://*.google.com/ https://*.googleapis.com; style-src 'unsafe-inline' *; font-src *; img-src *; media-src *; connect-src *",
+   "default_locale": "en",
    "description": "Adds reply and reply-to-author buttons to Google+ comments and a number of other enhancements.",
    "icons": {
       "128": "icon32.png",
@@ -13,10 +17,12 @@
       "32": "icon32.png",
       "64": "icon32.png"
    },
-   "options_page": "fancysettings/source/index.html",
+   "key": "MIGfMA0GCSqGSIb3DQEBAQUAA4GNADCBiQKBgQC3o0E1vq3GCBhfEkZM2ly6xqItmcZGVjdbpKMbNHYyIlR5f5gaKU0aCUGnTvd9lVcZCy/ovl0FQ3wBlVN48nf4J6MM6Xw/JLcYn6tA0w214zLT2f9KRU83Sg/8DJPilaCjyw+0JJMIbnOFtdPDAQG6dtFeZdZspggWGGMQafRwdwIDAQAB",
+   "manifest_version": 2,
    "name": "__MSG_extName__",
+   "options_page": "fancysettings/source/index.html",
    "permissions": [ "notifications" ],
    "update_url": "http://clients2.google.com/service/update2/crx",
-   "default_locale": "en",
-   "version": "1.39"
+   "version": "1.63",
+   "web_accessible_resources": [ "updates.html", "updates.js", "icon32.png" ]
 }

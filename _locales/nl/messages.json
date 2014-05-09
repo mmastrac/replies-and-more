@@ -1,39 +1,115 @@
 {
-  "extName": { "message": "Reacties en meer voor Google+" },
-  "reply_to_comment": { "message": "Reageren" },
-  "reply_to_author": { "message": "Auteur antwoorden" },
-  "share_on_twitter": { "message": "Delen op Twitter" }, 
-  "share_on_facebook": { "message": "Delen op Facebook" }, 
-  "share_by_email": { "message": "Email" }, 
-  "options": { "message": "Opties" },
-  "options_features": { "message": "Functies" },
-  "options_extra_features": { "message": "Extra functies" },
-  "options_beta": { "message": "Bèta" },
-  "options_bugs": { "message": "Bugs" },
-  "options_author": { "message": "Auteur" },
-  "options_reply_to_author": { "message": "Link 'Auteur antwoorden' bij berichten zetten" },
-  "options_reply_to_comment": { "message": "Link 'Reageren' bij berichten zetten" },
-  "options_fixed_header": { "message": "Header bovenaan zichtbaar houden bij scrollen" },
-  "options_ctrl_enter_submit": { "message": "Ctrl+Enter verzendt het huidige bericht" },
-  "options_shift_enter_submit": { "message": "Shift+Enter verzendt het huidige bericht" },
-  "options_m_mute": { "message": "'M' toets ('mute') gebruiken om een bericht te negeren" },
-  "options_favicon_notify": { "message": "Het tab-icoon animeren als er nieuwe meldingen zijn (no sleep mode)" },
-  "options_extended_shares": { "message": "Extra opties (delen op Twitter, Facebook, Email) toevoegen aan 'delen'-menu" },
-  "options_chime_notify": { "message": "Geluidssignaal laten horen bij nieuwe meldingen" },
-  "options_chime_notify_volume": { "message": "Geluidsvolume" },
-  "options_chime_notify_test": { "message": "Geluidssignaal testen" },
-  "options_desktop_notify": { "message": "Meldingen tonen op de desktop" },
-  "options_desktop_notify_test": { "message": "Meldingen op de desktop testen" },
-  "options_original_share": { "message": "Add link to original source of share" },
-  "options_report_bug": { "message": "Bug gevonden? Rapporteer hem op Google Code" },
-  "options_report_bug_button": { "message": "Bug rapporteren" },
-  "options_extension_page": { "message": "Plaats een lovende recensie op de extensie-pagina" },
-  "options_extension_page_button": { "message": "Extensie-pagina" },
-  "options_developer_page": { "message": "Volg, prijs en bekritiseer de ontwikkelaar op Google+" },
-  "options_developer_page_button": { "message": "Matt Mastracci op Google+" },
-  "options_donate_page": { "message": "Trakteer me op een kop koffie" },
-  "options_donate_page_button": { "message": "Doneren" },
-  "desktop_notify_1": { "message": "U hebt 1 nieuwe melding" },
-  "desktop_notify_n": { "message": "U hebt $count$ nieuwe meldingen", "placeholders": { "count": { "content": "$1" } } }
+   "desktop_notify_1": {
+      "message": "U hebt 1 nieuwe melding"
+   },
+   "desktop_notify_n": {
+      "message": "U hebt $count$ nieuwe meldingen",
+      "placeholders": {
+         "count": {
+            "content": "$1"
+         }
+      }
+   },
+   "extName": {
+      "message": "Reacties en meer voor Google+"
+   },
+   "options": {
+      "message": "Opties"
+   },
+   "options_author": {
+      "message": "Auteur"
+   },
+   "options_beta": {
+      "message": "B\u00E8ta"
+   },
+   "options_bugs": {
+      "message": "Bugs"
+   },
+   "options_chime_notify": {
+      "message": "Geluidssignaal laten horen bij nieuwe meldingen"
+   },
+   "options_chime_notify_test": {
+      "message": "Geluidssignaal testen"
+   },
+   "options_chime_notify_volume": {
+      "message": "Geluidsvolume"
+   },
+   "options_ctrl_enter_submit": {
+      "message": "Ctrl+Enter verzendt het huidige bericht"
+   },
+   "options_desktop_notify": {
+      "message": "Meldingen tonen op de desktop"
+   },
+   "options_desktop_notify_test": {
+      "message": "Meldingen op de desktop testen"
+   },
+   "options_developer_page": {
+      "message": "Volg, prijs en bekritiseer de ontwikkelaar op Google+"
+   },
+   "options_developer_page_button": {
+      "message": "Matt Mastracci op Google+"
+   },
+   "options_donate_page": {
+      "message": "Trakteer me op een kop koffie"
+   },
+   "options_donate_page_button": {
+      "message": "Doneren"
+   },
+   "options_extended_shares": {
+      "message": "Extra opties (delen op Twitter, Facebook, Email) toevoegen aan 'delen'-menu"
+   },
+   "options_extension_page": {
+      "message": "Plaats een lovende recensie op de extensie-pagina"
+   },
+   "options_extension_page_button": {
+      "message": "Extensie-pagina"
+   },
+   "options_extra_features": {
+      "message": "Extra functies"
+   },
+   "options_favicon_notify": {
+      "message": "Het tab-icoon animeren als er nieuwe meldingen zijn (no sleep mode)"
+   },
+   "options_features": {
+      "message": "Functies"
+   },
+   "options_fixed_header": {
+      "message": "Header bovenaan zichtbaar houden bij scrollen"
+   },
+   "options_m_mute": {
+      "message": "'M' toets ('mute') gebruiken om een bericht te negeren"
+   },
+   "options_original_share": {
+      "message": "Add link to original source of share"
+   },
+   "options_reply_to_author": {
+      "message": "Link 'Auteur antwoorden' bij berichten zetten"
+   },
+   "options_reply_to_comment": {
+      "message": "Link 'Reageren' bij berichten zetten"
+   },
+   "options_report_bug": {
+      "message": "Bug gevonden? Rapporteer hem op Google Code"
+   },
+   "options_report_bug_button": {
+      "message": "Bug rapporteren"
+   },
+   "options_shift_enter_submit": {
+      "message": "Shift+Enter verzendt het huidige bericht"
+   },
+   "reply_to_author": {
+      "message": "Auteur antwoorden"
+   },
+   "reply_to_comment": {
+      "message": "Reageren"
+   },
+   "share_by_email": {
+      "message": "Email"
+   },
+   "share_on_facebook": {
+      "message": "Delen op Facebook"
+   },
+   "share_on_twitter": {
+      "message": "Delen op Twitter"
+   }
 }
-

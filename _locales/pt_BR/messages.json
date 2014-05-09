@@ -1,32 +1,83 @@
 {
-  "extName": { "message": "Respostas e mais para o Google+" },
-  "reply_to_comment": { "message": "Responder" },
-  "reply_to_author": { "message": "Responder ao Autor" },
-  "share_on_twitter": { "message": "Compartilhar no Twitter" }, 
-  "share_on_facebook": { "message": "Compartilhar no Facebook" }, 
-  "share_by_email": { "message": "Email" }, 
-
-  "options": { "message": "Opções" },
-  "options_features": { "message": "Funções" },
-  "options_extra_features": { "message": "Funções Extra" },
-  "options_bugs": { "message": "Bugs" },
-  "options_author": { "message": "Autor" },
-  
-  "options_reply_to_author": { "message": "Adicionar um link 'Responder ao Autor' perto dos posts" },
-  "options_reply_to_comment": { "message": "Adicionar um link 'Responder' perto dos comentários" },
-  "options_fixed_header": { "message": "Cabeçalho flutuante ao rolar a página" },
-  "options_ctrl_enter_submit": { "message": "Ctrl+Enter envia o post ou comentário atual" },
-  "options_shift_enter_submit": { "message": "Shift+Enter envia o post ou comentário atual" },
-  "options_favicon_notify": { "message": "Animar o ícone da aba quando houver novas notificações (no sleep mode)" },
-  "options_extended_shares": { "message": "Adiciona opções extra de compartilhamento a um menu de compartilhamento (Twitter, Facebook, Email)" },
-  "options_chime_notify": { "message": "Tocar som quando houver novas notificações" },
-  "options_chime_notify_volume": { "message": "Volume do toque" },
-  "options_chime_notify_test": { "message": "Teste de som" },
-  "options_report_bug": { "message": "Achou um erro? Avise no Google Code" },
-  "options_report_bug_button": { "message": "Reportar Erro" },
-  "options_extension_page": { "message": "Visite a página da extensão para deixar um comentário" },
-  "options_extension_page_button": { "message": "Página da Extensão" },
-  "options_developer_page": { "message": "Siga ou reclame diretamente com o desenvolvedor no Google+" },
-  "options_developer_page_button": { "message": "Matt Mastracci no Google+" }
+   "extName": {
+      "message": "Respostas e mais para o Google+"
+   },
+   "options": {
+      "message": "Op\u00E7\u00F5es"
+   },
+   "options_author": {
+      "message": "Autor"
+   },
+   "options_bugs": {
+      "message": "Bugs"
+   },
+   "options_chime_notify": {
+      "message": "Tocar som quando houver novas notifica\u00E7\u00F5es"
+   },
+   "options_chime_notify_test": {
+      "message": "Teste de som"
+   },
+   "options_chime_notify_volume": {
+      "message": "Volume do toque"
+   },
+   "options_ctrl_enter_submit": {
+      "message": "Ctrl+Enter envia o post ou coment\u00E1rio atual"
+   },
+   "options_developer_page": {
+      "message": "Siga ou reclame diretamente com o desenvolvedor no Google+"
+   },
+   "options_developer_page_button": {
+      "message": "Matt Mastracci no Google+"
+   },
+   "options_extended_shares": {
+      "message": "Adiciona op\u00E7\u00F5es extra de compartilhamento a um menu de compartilhamento (Twitter, Facebook, Email)"
+   },
+   "options_extension_page": {
+      "message": "Visite a p\u00E1gina da extens\u00E3o para deixar um coment\u00E1rio"
+   },
+   "options_extension_page_button": {
+      "message": "P\u00E1gina da Extens\u00E3o"
+   },
+   "options_extra_features": {
+      "message": "Fun\u00E7\u00F5es Extra"
+   },
+   "options_favicon_notify": {
+      "message": "Animar o \u00EDcone da aba quando houver novas notifica\u00E7\u00F5es (no sleep mode)"
+   },
+   "options_features": {
+      "message": "Fun\u00E7\u00F5es"
+   },
+   "options_fixed_header": {
+      "message": "Cabe\u00E7alho flutuante ao rolar a p\u00E1gina"
+   },
+   "options_reply_to_author": {
+      "message": "Adicionar um link 'Responder ao Autor' perto dos posts"
+   },
+   "options_reply_to_comment": {
+      "message": "Adicionar um link 'Responder' perto dos coment\u00E1rios"
+   },
+   "options_report_bug": {
+      "message": "Achou um erro? Avise no Google Code"
+   },
+   "options_report_bug_button": {
+      "message": "Reportar Erro"
+   },
+   "options_shift_enter_submit": {
+      "message": "Shift+Enter envia o post ou coment\u00E1rio atual"
+   },
+   "reply_to_author": {
+      "message": "Responder ao Autor"
+   },
+   "reply_to_comment": {
+      "message": "Responder"
+   },
+   "share_by_email": {
+      "message": "Email"
+   },
+   "share_on_facebook": {
+      "message": "Compartilhar no Facebook"
+   },
+   "share_on_twitter": {
+      "message": "Compartilhar no Twitter"
+   }
 }
-

@@ -1,32 +1,83 @@
 {
-  "extName": { "message": "Respostas e mais para Google+" },
-  "reply_to_comment": { "message": "Responder" },
-  "reply_to_author": { "message": "Responder ao Autor" },
-  "share_on_twitter": { "message": "Partilhar no Twitter" }, 
-  "share_on_facebook": { "message": "Patilhar no Facebook" }, 
-  "share_by_email": { "message": "Email" }, 
-
-  "options": { "message": "Opções" },
-  "options_features": { "message": "Características" },
-  "options_extra_features": { "message": "Características Extra" },
-  "options_bugs": { "message": "Bugs" },
-  "options_author": { "message": "Autor" },
-  
-  "options_reply_to_author": { "message": "Adicionar o link 'Responder ao Autor' junto dos posts" },
-  "options_reply_to_comment": { "message": "Adicionar o link 'Responder' junto dos comentários" },
-  "options_fixed_header": { "message": "Manter o cabeçalho visível enquanto faz scroll da página" },
-  "options_ctrl_enter_submit": { "message": "Ctrl+Enter submete o post ou comentário actual" },
-  "options_shift_enter_submit": { "message": "Shift+Enter submete o post ou comentário actual" },
-  "options_favicon_notify": { "message": "Actualizar o icone do separador quando houver novas notificações (sem modo hibernação)" },
-  "options_extended_shares": { "message": "Adiciona opções extra de partilha (Twitter, Facebook, Email) a um menu de partilha" },
-  "options_chime_notify": { "message": "Fazer som quando houver nova notificações" },
-  "options_chime_notify_volume": { "message": "Volume do som" },
-  "options_chime_notify_test": { "message": "Testar som" },
-  "options_report_bug": { "message": "Encontrou um bug? Participa-o no Google Code" },
-  "options_report_bug_button": { "message": "Participar um Bug" },
-  "options_extension_page": { "message": "Visitar a página da extensão para deixar um opinião deslumbrante" },
-  "options_extension_page_button": { "message": "Página da Extensão" },
-  "options_developer_page": { "message": "Seguir ou fazer uma queixa directa ao programador no Google+" },
-  "options_developer_page_button": { "message": "Matt Mastracci no Google+" }
+   "extName": {
+      "message": "Respostas e mais para Google+"
+   },
+   "options": {
+      "message": "Op\u00E7\u00F5es"
+   },
+   "options_author": {
+      "message": "Autor"
+   },
+   "options_bugs": {
+      "message": "Bugs"
+   },
+   "options_chime_notify": {
+      "message": "Fazer som quando houver nova notifica\u00E7\u00F5es"
+   },
+   "options_chime_notify_test": {
+      "message": "Testar som"
+   },
+   "options_chime_notify_volume": {
+      "message": "Volume do som"
+   },
+   "options_ctrl_enter_submit": {
+      "message": "Ctrl+Enter submete o post ou coment\u00E1rio actual"
+   },
+   "options_developer_page": {
+      "message": "Seguir ou fazer uma queixa directa ao programador no Google+"
+   },
+   "options_developer_page_button": {
+      "message": "Matt Mastracci no Google+"
+   },
+   "options_extended_shares": {
+      "message": "Adiciona op\u00E7\u00F5es extra de partilha (Twitter, Facebook, Email) a um menu de partilha"
+   },
+   "options_extension_page": {
+      "message": "Visitar a p\u00E1gina da extens\u00E3o para deixar um opini\u00E3o deslumbrante"
+   },
+   "options_extension_page_button": {
+      "message": "P\u00E1gina da Extens\u00E3o"
+   },
+   "options_extra_features": {
+      "message": "Caracter\u00EDsticas Extra"
+   },
+   "options_favicon_notify": {
+      "message": "Actualizar o icone do separador quando houver novas notifica\u00E7\u00F5es (sem modo hiberna\u00E7\u00E3o)"
+   },
+   "options_features": {
+      "message": "Caracter\u00EDsticas"
+   },
+   "options_fixed_header": {
+      "message": "Manter o cabe\u00E7alho vis\u00EDvel enquanto faz scroll da p\u00E1gina"
+   },
+   "options_reply_to_author": {
+      "message": "Adicionar o link 'Responder ao Autor' junto dos posts"
+   },
+   "options_reply_to_comment": {
+      "message": "Adicionar o link 'Responder' junto dos coment\u00E1rios"
+   },
+   "options_report_bug": {
+      "message": "Encontrou um bug? Participa-o no Google Code"
+   },
+   "options_report_bug_button": {
+      "message": "Participar um Bug"
+   },
+   "options_shift_enter_submit": {
+      "message": "Shift+Enter submete o post ou coment\u00E1rio actual"
+   },
+   "reply_to_author": {
+      "message": "Responder ao Autor"
+   },
+   "reply_to_comment": {
+      "message": "Responder"
+   },
+   "share_by_email": {
+      "message": "Email"
+   },
+   "share_on_facebook": {
+      "message": "Patilhar no Facebook"
+   },
+   "share_on_twitter": {
+      "message": "Partilhar no Twitter"
+   }
 }
-
