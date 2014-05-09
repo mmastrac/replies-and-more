@@ -157,6 +157,13 @@ function determineText(element, length) {
     while (element != null) {
         var div = CLASSES.POST_TEXT.query(element);
         if (div) {
+            var brs = div.querySelectorAll('br');
+
+            // Workaround for <br> elements not showing up in textContent
+            for (var i = 0; i < brs.length; i++) {
+                brs[i].textContent = '\n';
+            }
+
             text = div.textContent.trim();
 
             if (text.length < length)
@@ -188,7 +195,7 @@ function addShareClickListener(dropdown) {
         var shareOnTwitter = document.createElement('a');
         shareOnTwitter.textContent = chrome.i18n.getMessage("share_on_twitter");
         shareOnTwitter.addEventListener("click", function() {
-            window.open("http://twitter.com/intent/tweet?text=" + encodeURIComponent(determineText(dropdown, 118)) + "&url=" + determineUrl(dropdown), "gplus_share", "width=600,height=300");
+            window.open("http://twitter.com/intent/tweet?text=" + encodeURIComponent(determineText(dropdown, 118).replace(/\n+/g, ' ')) + "&url=" + determineUrl(dropdown), "gplus_share", "width=600,height=300");
         }, false);
         shareOnTwitter.style.display = "block";
         popup.appendChild(shareOnTwitter);
