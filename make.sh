@@ -5,7 +5,7 @@ mkdir -p build/tmp
 mkdir -p build/zip
 
 cp -R extension/* build/tmp/
-if [ "$TRAVIS_BUILD_NUMBER" == "" ] 
+if [ "$TRAVIS_BUILD_NUMBER" = "" ] 
 then
 	export TRAVIS_BUILD_NUMBER="0"
 fi
