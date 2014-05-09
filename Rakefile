@@ -1,6 +1,6 @@
 require 'tmpdir'
 
-destination = 'output'
+destination = 'build/zip'
 
 desc 'Publish to GitHub Pages.'
 task :travis do
