@@ -233,6 +233,9 @@ function reply(profile, action) {
 
             var retry = 0;
             var fn = function() {
+                // How far we'll walk up the parent chain to find the edit box
+                var maxWalk = 3;
+
                 if (retry == 50) {
                     console.log("Never found edit box");
                     return;
@@ -272,6 +275,11 @@ function reply(profile, action) {
                     }
                     
                     editParent = editParent.parentElement;
+                    maxWalk--;
+
+                    if (maxWalk === 0) {
+                        break;
+                    }
                 }
 
                 console.log("Reply box not found, retrying..., parent was", parent);
