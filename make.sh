@@ -1,5 +1,14 @@
 #!/bin/bash
-rm -rf output
-mkdir output
-zip -9r -xmake.sh -x*.svn* -x*.git* -xoutput output/plus.zip .
-echo Wrote `pwd`/output/plus.zip
+rm -rf build
+mkdir -p build/tmp
+cp -R extension/* build/tmp/
+if [ "$TRAVIS_BUILD_NUMBER" == "" ] 
+then
+	export TRAVIS_BUILD_NUMBER="0"
+fi
+VERSION=2.$TRAVIS_BUILD_NUMBER
+cat extension/manifest.json | sed s/__BUILD_VERSION__/$VERSION/ > build/tmp/manifest.json
+cd build/tmp
+zip -9r ../plus.zip .
+cd ../..
+echo Wrote version $VERSION to `pwd`/build/plus.zip
