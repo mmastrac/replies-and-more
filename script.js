@@ -27,7 +27,7 @@ var CLASSES = {
     SHARE: classNameToSelector("Dg Ut"),
     // A post has been muted
     POST_MUTED: classNameToSelector("rj"),
-    POST_TEXT: classNameToSelector("wm VC"),
+    POST_TEXT: classNameToSelector("Bt Pm"),
     // A selector that matches both profile and comment names
     PROFILE_NAME: classNameToSelector("ob tv Ub"),
     // "Mute this post" menu item
@@ -157,21 +157,17 @@ function determineText(element, length) {
     while (element != null) {
         var div = CLASSES.POST_TEXT.query(element);
         if (div) {
-            text = div.textContent
+            text = div.textContent.trim();
 
-            // HACK: Chop off that 'edit' text
-            if (text.substring(text.length - 4, text.length) == "Edit")
-                text = text.substring(0, text.length - 4);
             if (text.length < length)
                return text;
                 
-            return text.substring(0, length - 3) + "...";
+            return text.substring(0, length - 3) + "\u2026";
         }
         element = element.parentElement;
     }
     
     return null;
-    
 }
 
 // ******************************************************************************
@@ -192,7 +188,7 @@ function addShareClickListener(dropdown) {
         var shareOnTwitter = document.createElement('a');
         shareOnTwitter.textContent = chrome.i18n.getMessage("share_on_twitter");
         shareOnTwitter.addEventListener("click", function() {
-            window.open("http://twitter.com/intent/tweet?text=" + encodeURIComponent(determineText(dropdown, 119)) + "&url=" + determineUrl(dropdown), "gplus_share", "width=600,height=300");
+            window.open("http://twitter.com/intent/tweet?text=" + encodeURIComponent(determineText(dropdown, 118)) + "&url=" + determineUrl(dropdown), "gplus_share", "width=600,height=300");
         }, false);
         shareOnTwitter.style.display = "block";
         popup.appendChild(shareOnTwitter);
