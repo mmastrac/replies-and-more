@@ -1,3 +1,7 @@
+require 'tmpdir'
+
+destination = 'output'
+
 desc 'Publish to GitHub Pages.'
 task :travis do
   # if this is a pull request, do a simple build of the site and stop

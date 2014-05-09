@@ -1,3 +1,5 @@
 #!/bin/bash
-zip -9r -xmake.sh -x*.svn* -x*.git* /tmp/plus-$$.zip .
-echo Wrote plus-$$.zip
+rm -rf output
+mkdir output
+zip -9r -xmake.sh -x*.svn* -x*.git* -xoutput output/plus.zip .
+echo Wrote `pwd`/output/plus.zip
