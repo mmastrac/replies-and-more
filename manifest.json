@@ -1,0 +1,22 @@
+{
+   "background_page": "background.html",
+   "content_scripts": [ {
+      "all_frames": true,
+      "js": [ "script.js" ],
+      "matches": [ "http://plus.google.com/*", "https://plus.google.com/*" ],
+      "run_at": "document_start"
+   } ],
+   "description": "Adds reply and reply-to-author buttons to Google+ comments and a number of other enhancements.",
+   "icons": {
+      "128": "icon32.png",
+      "16": "icon32.png",
+      "32": "icon32.png",
+      "64": "icon32.png"
+   },
+   "options_page": "fancysettings/source/index.html",
+   "name": "__MSG_extName__",
+   "permissions": [ "notifications" ],
+   "update_url": "http://clients2.google.com/service/update2/crx",
+   "default_locale": "en",
+   "version": "1.39"
+}

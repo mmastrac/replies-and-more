@@ -1,0 +1,31 @@
+{
+  "extName": { "message": "Repliche e altro per Google+" },
+  "reply_to_comment": { "message": "Replica" },
+  "reply_to_author": { "message": "Replica all'autore" },
+  "share_on_twitter": { "message": "Condividi su Twitter" }, 
+  "share_on_facebook": { "message": "Condividi su Facebook" }, 
+  "share_by_email": { "message": "Email" }, 
+
+  "options": { "message": "Opzioni" },
+  "options_features": { "message": "Caratteristiche" },
+  "options_extra_features": { "message": "Caratteristiche Extra" },
+  "options_bugs": { "message": "Bugs" },
+  "options_author": { "message": "Autore" },
+  
+  "options_reply_to_author": { "message": "Aggiungi 'Replica all'Autore' dopo il link prossimo posts" },
+  "options_reply_to_comment": { "message": "Aggiungi 'Replica' dopo il link dei commenti" },
+  "options_fixed_header": { "message": "Float l'intestazione quando scorri in basso la pagina" },
+  "options_ctrl_enter_submit": { "message": "Ctrl+Enter submits il post corrente o il commento" },
+  "options_shift_enter_submit": { "message": "Shift+Enter submits il post corrente o il commento" },
+  "options_favicon_notify": { "message": "Anima l'icona della scheda quando ci sono nuove notifiche (no sleep mode)" },
+  "options_extended_shares": { "message": "Aggiungi opzioni di condivisione extra (Twitter, Facebook, Email) nel menù di condivisione" },
+  "options_chime_notify": { "message": "Chime suono per le nuove notifiche" },
+  "options_chime_notify_volume": { "message": "Chime volume" },
+  "options_chime_notify_test": { "message": "Test sound" },
+  "options_report_bug": { "message": "Hai trovato un bug? Segnalalo su Google Code" },
+  "options_report_bug_button": { "message": "Segnala un Bug" },
+  "options_extension_page": { "message": "Visita la pagina delle estensioni per lasciare una recensione entusiastica" },
+  "options_extension_page_button": { "message": "Pagina delle estensioni" },
+  "options_developer_page": { "message": "Seguite o lamentatevi direttamente con lo sviluppatore su Google+" },
+  "options_developer_page_button": { "message": "Matt Mastracci su Google+" }
+}
