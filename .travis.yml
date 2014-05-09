@@ -1,6 +1,14 @@
 language: bash
 script:
-- sh make.sh
+  - sh make.sh
+  - rake travis
+
+branches:
+  only:
+    - master
+
 env:
   global:
     secure: hRp1WY7+2jztd7O+IMrESr9OHO1Nfa2HvMygOK1gz0YC+d4n0q5yva6OvWi0tiC/XtDdOJuSQ8vzlLbfL2Kpop3U3Gtt+NdQlD+TdWJsEnzAyCWdpGJTxTzNSdF14hpDVjXQinnWH8BKgdX0jaOKNomNzaGOs6e3Kz6RmmOHICc=
+
+
