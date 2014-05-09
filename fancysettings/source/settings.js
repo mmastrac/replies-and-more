@@ -1,7 +1,7 @@
 window.addEvent("domready", function () {
     new FancySettings.initWithManifest(function (settings) {
         settings.manifest.report_bug.addEvent("action", function () {
-            window.open("http://code.google.com/p/buzz-plus/issues/list");
+            window.open("https://github.com/mmastrac/replies-and-more/issues");
         });
         settings.manifest.extension_page.addEvent("action", function () {
             window.open("https://chrome.google.com/webstore/detail/fgmhgfecnmeljhchgcjlfldjiepcfpea");

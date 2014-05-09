@@ -18,7 +18,7 @@ var multipleNotify = false;
 var CURRENT_UPDATES_VALUE = 2;
 
 var cachedShortcutIcon = new Image();
-cachedShortcutIcon.src = "favicon2.ico";
+cachedShortcutIcon.src = "https://ssl.gstatic.com/s2/oz/images/faviconr3.ico";
 
 function onRequest(request, sender, callback) {
     if (request.name == 'settings')

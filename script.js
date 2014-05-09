@@ -5,7 +5,6 @@ var BATCH_SIZE = 40;
 
 var foundSomeButtons = true;
 
-var cachedShortcutIcon;
 var cachedCount = -1;
 var settings;
 
@@ -591,10 +590,8 @@ function inject() {
 }
 
 if (!isJsPage && !isHangoutPage && !isBlankPage) {
-    console.log("**** Replies and More: " + window.location);
+    console.log("**** Replies and More loaded for: " + window.location);
     document.addEventListener("DOMContentLoaded", onLoad);
-    cachedShortcutIcon = new Image();
-    cachedShortcutIcon.src = "https://ssl.gstatic.com/s2/oz/images/faviconr3.ico";
 
 /*    var script = document.createElement('script');
     script.innerHTML = inject.toString() + "\ninject();";
