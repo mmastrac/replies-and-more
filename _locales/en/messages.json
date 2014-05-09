@@ -107,7 +107,7 @@
       "message": "Shift+Enter submits the current post or comment"
    },
    "reply_to_author": {
-      "message": "Reply to Author"
+      "message": "\u21e2 author"
    },
    "share_by_email": {
       "message": "Email"

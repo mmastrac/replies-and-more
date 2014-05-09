@@ -235,9 +235,17 @@ function reply(profile, action) {
         if (commentBox) {
             simulateClick(commentBox);
 
-            setTimeout(function() {
-                while (parent != null) {
-                    var textareas = parent.querySelector("*[contenteditable]");
+            var retry = 0;
+            var fn = function() {
+                if (retry == 50) {
+                    console.log("Never found edit box");
+                    return;
+                }
+
+                var editParent = parent;
+
+                while (editParent != null) {
+                    var textareas = editParent.querySelector("*[contenteditable]");
                     if (textareas) {
                         textareas.focus();    
                         
@@ -267,9 +275,14 @@ function reply(profile, action) {
                         return;
                     }
                     
-                    parent = parent.parentElement;
+                    editParent = editParent.parentElement;
                 }
-            }, 200);            
+
+                console.log("Reply box not found, retrying..., parent was", parent);
+                setTimeout(fn, 200);
+            };
+
+            fn();
             return;
         }
 
