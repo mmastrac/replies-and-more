@@ -463,7 +463,7 @@ function desktopNotify(count) {
 }
 
 function processNotifications() {
-    var holder = document.getElementById('gbgs1');
+    var holder = document.querySelector('.gb_Ma');
     // this must be a page without notifications
     if (holder == null)
         return;
@@ -513,7 +513,7 @@ function notify() {
 }
 
 function notificationCount() {
-    var notifications = document.getElementById('gbi1');
+    var notifications = document.querySelector('.gb_Ma');
     if (notifications != null && notifications.textContent.trim() != "") {
         if (notifications.textContent == "9+")
             return 9;
