@@ -11,7 +11,7 @@ var settings;
 // This is a copy of what Google+ uses for reply buttons
 var REPLY_CSS = "white-space: nowrap; background-image: initial; background-attachment: initial; background-origin: initial; background-clip: initial; background-color: rgb(238, 238, 238); border-top-width: 1px; border-right-width: 1px; border-bottom-width: 1px; border-left-width: 1px; border-top-style: solid; border-right-style: solid; border-bottom-style: solid; border-left-style: solid; border-top-color: rgb(221, 221, 221); border-right-color: rgb(221, 221, 221); border-bottom-color: rgb(221, 221, 221); border-left-color: rgb(221, 221, 221); border-image: initial; border-top-left-radius: 2px; border-top-right-radius: 2px; border-bottom-right-radius: 2px; border-bottom-left-radius: 2px; display: inline-block; font-family: Arial, sans-serif; font-size: 13px; font-style: normal; font-variant: normal; font-weight: normal; line-height: 1.4; margin-top: 0px; margin-right: 1px; margin-bottom: 0px; margin-left: 1px; padding-top: 0px; padding-right: 1px; padding-bottom: 0px; padding-left: 1px; vertical-align: baseline; color: rgb(51, 102, 204); background-position: initial initial; background-repeat: initial initial;"
 
-var SHARE_DROPDOWN_CSS = "margin-left:-13px; margin-top:4px; width: 2ex; text-align: center; color: #999; border-radius-top-left: 0; border-radius-top-right: 0; text-decoration: none; cursor: pointer; position: absolute;";
+var SHARE_DROPDOWN_CSS = "margin-left: -9px; margin-top:4px; width: 1.8ex; text-align: center; color: #999; border-radius-top-left: 1; border-radius-top-right: 1; text-decoration: none; cursor: pointer; position: absolute; border: 1px solid #d9d9d9; background-color: white;";
 
 var PROCESSED_MARKER_CLASS = "plus_plus";
 
@@ -22,19 +22,19 @@ var PROCESSED_MARKER_CLASS = "plus_plus";
 // The only approach that's worked so far is hard-coding selectors here, so we'll stick to it.
 var CLASSES = {
     // Comment box
-    COMMENT: classNameToSelector("Kj bI"),
+    COMMENT: classNameToSelector("Dt wu"),
     // Share button
-    SHARE: classNameToSelector("Pk"),
+    SHARE: classNameToSelector("Dg Ut"),
     // A post has been muted
     POST_MUTED: classNameToSelector("rj"),
     POST_TEXT: classNameToSelector("wm VC"),
     // A selector that matches both profile and comment names
-    PROFILE_NAME: classNameToSelector("Sg Ob"),
+    PROFILE_NAME: classNameToSelector("ob tv Ub"),
     // "Mute this post" menu item
     MUTE: classNameToSelector("ot nl"),
     SELECTED_POST: classNameToSelector("sb"),
-    SAVE_POST: classNameToSelector("c-b-M"), // for edit
-    SHARE_POST: classNameToSelector("c-b-da"), // for post, share and comment
+    SAVE_POST: classNameToSelector("b-c-U"), // for edit
+    SHARE_POST: classNameToSelector("b-c-Ba"), // for post, share and comment
     // For our share pseudo-dropdown
     BUTTON: classNameToSelector("sr"),
     // Read more (on posts)
@@ -181,11 +181,13 @@ function determineText(element, length) {
 
 function addShareClickListener(dropdown) {
     dropdown.addEventListener("click", function(e) {
+        e.stopPropagation();
+
         var popup = document.createElement("div");
-        popup.style.cssText = "box-shadow: 0 2px 4px rgba(0, 0, 0, .2); border-radius: 2px; background-color: white; border: 1px solid #CCC; padding: 16px; position: absolute; z-index: 1201!important;";
+        popup.style.cssText = "box-shadow: 0 2px 4px rgba(0, 0, 0, .2); border-radius: 2px; background-color: white; border: 1px solid #CCC; padding: 16px; position: absolute; z-index: 10000 !important;";
         // don't set top so the box inherits the current Y
-        popup.style.left = e.offsetX + "px";
-        popup.style.top = dropdown.offsetTop + dropdown.offsetHeight + "px";
+        popup.style.left = document.body.scrollLeft + dropdown.getBoundingClientRect().left + "px";
+        popup.style.top = document.body.scrollTop + dropdown.getBoundingClientRect().top + "px";
 
         var shareOnTwitter = document.createElement('a');
         shareOnTwitter.textContent = chrome.i18n.getMessage("share_on_twitter");
@@ -211,7 +213,7 @@ function addShareClickListener(dropdown) {
         shareByEmail.style.display = "block";
         popup.appendChild(shareByEmail);
         
-        dropdown.parentElement.appendChild(popup);
+        document.body.appendChild(popup);
 
         function popper() {
             popup.parentElement.removeChild(popup);
@@ -568,7 +570,7 @@ function inject() {
     var stashedAddEventListener = document.addEventListener;
     document.addEventListener = function(a, b, c) {
         if (a == "scroll") {
-            console.log("Ate scroll listener (Replies and More)");
+            console.log("Ate scroll listener (Replies and More)");
             listeners.push(b);
             return;
         }

@@ -21,6 +21,6 @@
    "name": "__MSG_extName__",
    "options_page": "fancysettings/source/index.html",
    "permissions": [ "notifications" ],
-   "version": "1.63",
+   "version": "1.64",
    "web_accessible_resources": [ "updates.html", "updates.js", "icon32.png" ]
 }
