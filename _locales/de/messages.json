@@ -4,8 +4,5 @@
    },
    "reply_to_author": {
       "message": "Dem Autor antworten"
-   },
-   "reply_to_comment": {
-      "message": "Antworten"
    }
 }

@@ -14,6 +14,8 @@ var REPLY_CSS = "white-space: nowrap; background-image: initial; background-atta
 
 var SHARE_DROPDOWN_CSS = "margin-left:-13px; margin-top:4px; width: 2ex; text-align: center; color: #999; border-radius-top-left: 0; border-radius-top-right: 0; text-decoration: none; cursor: pointer; position: absolute;";
 
+var PROCESSED_MARKER_CLASS = "plus_plus";
+
 // ******************************************************************************
 //  Google+ page classes
 // ******************************************************************************
@@ -295,7 +297,7 @@ function processFooters(first) {
     }
 
     var buttons = document.body 
-        ? document.body.querySelectorAll("div[g\\:entity^=buzz]:not([plus_plus]), button[g\\:entity^=comment]:not([plus_plus])") 
+        ? document.body.querySelectorAll("div[g\\:entity^=buzz]:not([" + PROCESSED_MARKER_CLASS + "]), button[g\\:entity^=comment]:not([" + PROCESSED_MARKER_CLASS + "])") 
         : [];
 
 //    console.log("Buttons: " + buttons.length);
@@ -310,7 +312,7 @@ function processFooters(first) {
     
     for (var i = 0; i < buttons.length; i++) {
         var button = buttons[i];
-        button.setAttribute("plus_plus", 1);
+        button.setAttribute(PROCESSED_MARKER_CLASS, 1);
 
         // Try to figure out what the author's name is
         var parent = button.parentElement;
@@ -559,6 +561,7 @@ function onKeyDown(e) {
 
 var isJsPage = !!window.location.href.match(/_\/apps-static\//);
 var isHangoutPage = !!window.location.href.match(/hangouts\/_/);
+var isBlankPage = !!window.location.href.match(/_\/blank/);
 
 function inject() {
     var listeners = [];
@@ -587,11 +590,11 @@ function inject() {
     }, 500);
 }
 
-if (!isJsPage && !isHangoutPage) {
+if (!isJsPage && !isHangoutPage && !isBlankPage) {
     console.log("**** Replies and More: " + window.location);
     document.addEventListener("DOMContentLoaded", onLoad);
     cachedShortcutIcon = new Image();
-    cachedShortcutIcon.src = "favicon2.ico";
+    cachedShortcutIcon.src = "https://ssl.gstatic.com/s2/oz/images/faviconr3.ico";
 
 /*    var script = document.createElement('script');
     script.innerHTML = inject.toString() + "\ninject();";

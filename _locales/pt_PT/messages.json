@@ -53,9 +53,6 @@
    "options_reply_to_author": {
       "message": "Adicionar o link 'Responder ao Autor' junto dos posts"
    },
-   "options_reply_to_comment": {
-      "message": "Adicionar o link 'Responder' junto dos coment\u00E1rios"
-   },
    "options_report_bug": {
       "message": "Encontrou um bug? Participa-o no Google Code"
    },
@@ -67,9 +64,6 @@
    },
    "reply_to_author": {
       "message": "Responder ao Autor"
-   },
-   "reply_to_comment": {
-      "message": "Responder"
    },
    "share_by_email": {
       "message": "Email"

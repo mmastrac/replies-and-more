@@ -13,13 +13,6 @@ this.manifest = {
     {
       "tab": chrome.i18n.getMessage("options"),
       "group": chrome.i18n.getMessage("options_features"),
-      "name": "reply_to_comment",
-      "type": "checkbox",
-      "label": chrome.i18n.getMessage("options_reply_to_comment")
-    },
-    {
-      "tab": chrome.i18n.getMessage("options"),
-      "group": chrome.i18n.getMessage("options_features"),
       "name": "ctrl_enter_submit",
       "type": "checkbox",
       "label": chrome.i18n.getMessage("options_ctrl_enter_submit")

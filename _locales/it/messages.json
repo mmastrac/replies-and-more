@@ -53,9 +53,6 @@
    "options_reply_to_author": {
       "message": "Aggiungi 'Replica all'Autore' dopo il link prossimo posts"
    },
-   "options_reply_to_comment": {
-      "message": "Aggiungi 'Replica' dopo il link dei commenti"
-   },
    "options_report_bug": {
       "message": "Hai trovato un bug? Segnalalo su Google Code"
    },
@@ -67,9 +64,6 @@
    },
    "reply_to_author": {
       "message": "Replica all'autore"
-   },
-   "reply_to_comment": {
-      "message": "Replica"
    },
    "share_by_email": {
       "message": "Email"

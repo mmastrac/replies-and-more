@@ -1,6 +1,5 @@
 var settings = new Store("settings", {
     "reply_to_author": true,
-    "reply_to_comment": true,
     "ctrl_enter_submit": true,
     "shift_enter_submit": true,
     "m_mute": true,

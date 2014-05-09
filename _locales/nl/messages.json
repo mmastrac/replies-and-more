@@ -85,9 +85,6 @@
    "options_reply_to_author": {
       "message": "Link 'Auteur antwoorden' bij berichten zetten"
    },
-   "options_reply_to_comment": {
-      "message": "Link 'Reageren' bij berichten zetten"
-   },
    "options_report_bug": {
       "message": "Bug gevonden? Rapporteer hem op Google Code"
    },
@@ -99,9 +96,6 @@
    },
    "reply_to_author": {
       "message": "Auteur antwoorden"
-   },
-   "reply_to_comment": {
-      "message": "Reageren"
    },
    "share_by_email": {
       "message": "Email"
