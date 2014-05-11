@@ -45,18 +45,19 @@ function onRequest(request, sender, callback) {
     }
     if (request.name == 'favicon') {
         var canvas = document.createElement('canvas');
-        canvas.width = 16;
-        canvas.height = 16;
+        var dp = window.devicePixelRatio;
+        canvas.width = 16 * dp;
+        canvas.height = 16 * dp;
         var ctx = canvas.getContext('2d');
-        ctx.drawImage(cachedShortcutIcon, 0, 0, 16, 16);
+        ctx.drawImage(cachedShortcutIcon, 0, 0, 16 * dp, 16 * dp);
         if (request.count > 0) {
             ctx.fillStyle = "#000";//"#e33";
-            ctx.fillRect(8, 8, 8, 8);
-            ctx.font = "8px Arial";
+            ctx.fillRect(8 * dp, 8 * dp, 8 * dp, 8 * dp);
+            ctx.font = (8 * dp) + "px Arial";
             ctx.fillStyle = "#fff";
-            ctx.fillText(request.count, 9.5, 14.5);
-            ctx.fillStyle = "#fff";
-            ctx.fillText(request.count, 10, 15);
+            ctx.fillText(request.count, 9.5 * dp, 14.5 * dp);
+            ctx.fillStyle = "#eee";
+            ctx.fillText(request.count, 10 * dp, 15 * dp);
         }  
         
         callback(canvas.toDataURL());
