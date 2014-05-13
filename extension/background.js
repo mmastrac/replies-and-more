@@ -5,7 +5,6 @@ var settings = new Store("settings", {
     "m_mute": true,
     "favicon_notify": true,
     "desktop_notify": false,
-    "extended_shares": true,
     "chime_notify": false,
     "chime_notify_volume": 0.5,
     "auto_expand_posts": true,

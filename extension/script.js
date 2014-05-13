@@ -37,15 +37,15 @@ var CLASSES = {
     SHARE_POST: classNameToSelector("b-c-Ba"), // for post, share and comment
     // For our share pseudo-dropdown
     BUTTON: classNameToSelector("sr"),
-    // Read more (on posts)
-    READ_MORE: classNameToSelector("syxni JBNexc"),
-    SHOW_LESS: classNameToSelector("Ydiz JBNexc"),
+    // Read more/show less (on posts and shares)
+    READ_MORE: classNameToSelector("d-s on gj"),
+    SHOW_LESS: classNameToSelector("d-s zt gj"),
     // Expanded comment section
-    EXPANDED_COMMENTS: classNameToSelector("Fx3Tkd"),
-    // A comment that is collapsed
-    COLLAPSED_COMMENT: classNameToSelector("Gm"),
-    // A comment that is collapsed
-    COLLAPSED_COMMENT_READ_MORE: classNameToSelector("unQkyd"),
+    EXPANDED_COMMENTS: classNameToSelector("d-s vy"),
+    // The portion of a collapsed comment that is truncated
+    COLLAPSED_COMMENT: classNameToSelector("Aq DK Bt UR"),
+    // The container for the links that would extend or retract that comment
+    COLLAPSED_COMMENT_READ_MORE: classNameToSelector("YR"),
 }
 
 /*
