@@ -174,6 +174,7 @@ function determineText(element, length) {
         element = element.parentElement;
     }
     
+    console.log('Never found post text.');
     return null;
 }
 
@@ -186,37 +187,72 @@ function addShareClickListener(dropdown) {
     dropdown.addEventListener("click", function(e) {
         e.stopPropagation();
 
+        var ADD_THIS_SCRIPT_ID = 'add-this-via-replies-and-more';
+
+        var url = determineUrl(dropdown);
+        var shortDesc = determineText(dropdown, 100);
+        var longDesc = determineText(dropdown, 400);
+        var id = 'popup-' + Math.random().toString(36).slice(2) + Math.random().toString(36).slice(2);
+
+        // Only add this once
+        if (!document.getElementById(ADD_THIS_SCRIPT_ID)) {
+            var addThisConfigScript = document.createElement('script');
+            addThisConfigScript.innerText = 'var addthis_config = { "data_track_addressbar": false, "data_track_clickback": false };';
+            document.body.appendChild(addThisConfigScript);
+
+            var addThisScript = document.createElement('script');
+            addThisScript.id = ADD_THIS_SCRIPT_ID;
+            addThisScript.src = 'https://s7.addthis.com/js/300/addthis_widget.js#pubid=ra-5377aaa437ecdc15&domready=1';
+            document.body.appendChild(addThisScript);
+        }
+
+        var shareHTML =
+            '<div class="addthis_loading">Loading...</div>' +
+            '<div class="addthis_toolbox addthis_default_style">' +
+            '<a class="addthis_button_facebook"></a>' +
+            '<a class="addthis_button_twitter"></a>' +
+            '<a class="addthis_button_mailto"></a>' +
+            '<a class="addthis_button_linkedin"></a>' +
+            '<a class="addthis_button_tumblr"></a>' +
+            '<a class="addthis_button_pinterest"></a>' +
+            '</div>';
+
         var popup = document.createElement("div");
         popup.style.cssText = "box-shadow: 0 2px 4px rgba(0, 0, 0, .2); border-radius: 2px; background-color: white; border: 1px solid #CCC; padding: 16px; position: absolute; z-index: 10000 !important;";
         // don't set top so the box inherits the current Y
         popup.style.left = document.body.scrollLeft + dropdown.getBoundingClientRect().left + "px";
         popup.style.top = document.body.scrollTop + dropdown.getBoundingClientRect().top + "px";
 
-        var shareOnTwitter = document.createElement('a');
-        shareOnTwitter.textContent = chrome.i18n.getMessage("share_on_twitter");
-        shareOnTwitter.addEventListener("click", function() {
-            window.open("http://twitter.com/intent/tweet?text=" + encodeURIComponent(determineText(dropdown, 118).replace(/\n+/g, ' ')) + "&url=" + determineUrl(dropdown), "gplus_share", "width=600,height=300");
-        }, false);
-        shareOnTwitter.style.display = "block";
-        popup.appendChild(shareOnTwitter);
-        
-        var shareOnFacebook = document.createElement('a');
-        shareOnFacebook.textContent = chrome.i18n.getMessage("share_on_facebook");
-        shareOnFacebook.addEventListener("click", function() {
-            window.open("http://www.facebook.com/sharer.php?u=" + determineUrl(dropdown) + "&t=" + encodeURIComponent(determineText(dropdown, 400)), "gplus_share", "width=600,height=300");
-        }, false);
-        shareOnFacebook.style.display = "block";
-        popup.appendChild(shareOnFacebook);
+        popup.innerHTML = shareHTML;
+        popup.querySelector('.addthis_toolbox').setAttribute('addthis:url', url);
+        popup.querySelector('.addthis_toolbox').setAttribute('addthis:title', shortDesc);
+        popup.querySelector('.addthis_toolbox').setAttribute('addthis:description', longDesc);
 
-        var shareByEmail = document.createElement('a');
-        shareByEmail.textContent = chrome.i18n.getMessage("share_by_email");
-        shareByEmail.addEventListener("click", function() {
-            window.open("mailto:?body=" + encodeURIComponent(determineText(dropdown, 400) + "\n\n" + determineUrl(dropdown) + "\n") + "&subject=" + encodeURIComponent("Google+ Share"));
-        }, false);
-        shareByEmail.style.display = "block";
-        popup.appendChild(shareByEmail);
-        
+        console.log(url);
+        console.log(shortDesc);
+        console.log(longDesc);
+
         document.body.appendChild(popup);
+
+        // Inject this
+        function populatePopup(id) {
+            if (!window.addthis) {
+                setTimeout(function() { populatePopup(id) }, 100);
+                return;
+            }
+
+            var loading = document.querySelectorAll('.addthis_loading');
+            for (var i = 0; i < loading.length; i++) {
+                loading[i].style.display = 'none';
+            }
+
+            addthis.toolbox('.addthis_toolbox');
+        }
+
+        var script = document.createElement('script');
+        script.innerHTML = populatePopup.toString() + ";populatePopup('" + id + "');";
+        document.documentElement.insertBefore(script, null);
+        document.documentElement.removeChild(script);
 
         function popper() {
             popup.parentElement.removeChild(popup);
