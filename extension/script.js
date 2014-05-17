@@ -197,7 +197,7 @@ function addShareClickListener(dropdown) {
         // Only add this once
         if (!document.getElementById(ADD_THIS_SCRIPT_ID)) {
             var addThisConfigScript = document.createElement('script');
-            addThisConfigScript.innerText = 'var addthis_config = { "data_track_addressbar": false, "data_track_clickback": false };';
+            addThisConfigScript.innerText = 'var addthis_config = { "data_track_addressbar": false, "data_track_clickback": false, "ui_508_compliant": true };';
             document.body.appendChild(addThisConfigScript);
 
             var addThisScript = document.createElement('script');
@@ -214,7 +214,8 @@ function addShareClickListener(dropdown) {
             '<a class="addthis_button_mailto"></a>' +
             '<a class="addthis_button_linkedin"></a>' +
             '<a class="addthis_button_tumblr"></a>' +
-            '<a class="addthis_button_pinterest"></a>' +
+            '<a class="addthis_button_hootsuite"></a>' +
+            '<a class="addthis_button_pinterest_share"></a>' +
             '</div>';
 
         var popup = document.createElement("div");
