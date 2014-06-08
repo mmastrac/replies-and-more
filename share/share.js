@@ -1,5 +1,11 @@
 var addthis_config = { "data_track_addressbar": false, "data_track_clickback": false, "ui_508_compliant": true };
 
+var shareData = JSON.parse(decodeURIComponent(location.search.slice(1)));
+
+popup.querySelector('.addthis_toolbox').setAttribute('addthis:url', shareData.url);
+popup.querySelector('.addthis_toolbox').setAttribute('addthis:title', shareData.shortDesc);
+popup.querySelector('.addthis_toolbox').setAttribute('addthis:description', shareData.longDesc);
+
 function populatePopup() {
 	if (!window.addthis) {
 	    setTimeout(function() { populatePopup() }, 100);
