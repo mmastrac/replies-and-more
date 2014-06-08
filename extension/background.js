@@ -9,9 +9,8 @@ var settings = new Store("settings", {
     "chime_notify_volume": 0.5,
     "auto_expand_posts": true,
     "auto_expand_comments": true,
+    "extended_shares": true
 });
-
-
 
 var multipleNotify = false;
 var CURRENT_UPDATES_VALUE = 2;
