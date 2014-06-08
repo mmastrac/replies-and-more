@@ -1,5 +1,5 @@
 var addthis_config = { "data_track_addressbar": false, "data_track_clickback": false, "ui_508_compliant": true };
-
+/*
 var createElement = document.createElement;
 
 document.createElement = function(tagName) {
@@ -21,3 +21,4 @@ document.createElement = function(tagName) {
 
 	return elem;
 }
+*/
