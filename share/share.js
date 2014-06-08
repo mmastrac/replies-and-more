@@ -3,6 +3,7 @@ var addthis_config = { "data_track_addressbar": false, "data_track_clickback": f
 function populatePopup() {
 	if (!window.addthis) {
 	    setTimeout(function() { populatePopup() }, 100);
+	    return;
 	}
 
 	var loading = document.querySelectorAll('.addthis_loading');
