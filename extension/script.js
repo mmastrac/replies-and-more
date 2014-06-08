@@ -27,7 +27,7 @@ var CLASSES = {
     SHARE: classNameToSelector("Dg Ut"),
     // A post has been muted
     POST_MUTED: classNameToSelector("rj"),
-    POST_TEXT: classNameToSelector("Bt Pm"),
+    POST_TEXT: classNameToSelector("Ct"),
     // A selector that matches both profile and comment names
     PROFILE_NAME: classNameToSelector("ob tv Ub"),
     // "Mute this post" menu item
