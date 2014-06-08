@@ -11,3 +11,5 @@ function populatePopup() {
 	    loading[i].style.display = 'none';
 	}
 }
+
+populatePopup();
