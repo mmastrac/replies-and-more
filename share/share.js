@@ -3,8 +3,8 @@ var addthis_config = { "data_track_addressbar": false, "data_track_clickback": f
 var shareData = JSON.parse(decodeURIComponent(location.search.slice(1)));
 
 document.querySelector('.addthis_toolbox').setAttribute('addthis:url', shareData.url);
-document.querySelector('.addthis_toolbox').setAttribute('addthis:title', shareData.shortDesc);
-document.querySelector('.addthis_toolbox').setAttribute('addthis:description', shareData.longDesc);
+document.querySelector('.addthis_toolbox').setAttribute('addthis:title', shareData.title);
+document.querySelector('.addthis_toolbox').setAttribute('addthis:description', shareData.description);
 
 function populatePopup() {
 	if (!window.addthis) {
