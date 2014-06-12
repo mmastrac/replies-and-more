@@ -26,13 +26,14 @@ var CLASSES = {
     // Share button
     SHARE: classNameToSelector("Dg Ut"),
     // A post has been muted
-    POST_MUTED: classNameToSelector("rj"),
+    POST_MUTED: classNameToSelector("hR"),
+
     POST_TEXT: classNameToSelector("Ct"),
     // A selector that matches both profile and comment names
     PROFILE_NAME: classNameToSelector("ob tv Ub"),
     // "Mute this post" menu item
-    MUTE: classNameToSelector("ot nl"),
-    SELECTED_POST: classNameToSelector("sb"),
+    MUTE: classNameToSelector("d-A G3"),
+    SELECTED_POST: classNameToSelector("va"),
     SAVE_POST: classNameToSelector("b-c-U"), // for edit
     SHARE_POST: classNameToSelector("b-c-Ba"), // for post, share and comment
     // For our share pseudo-dropdown
@@ -555,7 +556,7 @@ function onKeyDown(e) {
         }
         
         if (isPostMuted(selectedPost)) {
-            var unmute = selectedPost.querySelector("span[role=button]");
+            var unmute = selectedPost.querySelector("div[role=button]");
             console.log("Unmuting post");   
             simulateClick(unmute);
             return;
@@ -572,7 +573,16 @@ function onKeyDown(e) {
         
         var mute = CLASSES.MUTE.query(selectedPost);
         if (mute == null) {
-            alert("Unable to find mute link");
+            // Try again in a timeout
+            setTimeout(function() {
+                var mute = CLASSES.MUTE.query(selectedPost);
+                if (mute == null) {
+                    alert("Unable to find mute link");
+                    return;
+                }
+
+                simulateClick(mute);
+            }, 100);
             return;
         }
         simulateClick(mute);
